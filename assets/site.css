@@ -35,7 +35,6 @@ a:hover { text-decoration: underline; }
 .langs { display: flex; gap: 4px; font-size: 13px; }
 .lang { padding: 2px 8px; border-radius: 5px; color: var(--muted); }
 .lang.on { background: var(--card); color: var(--fg); }
-.lang.off { color: var(--faint); cursor: default; }
 
 /* 骨架：左目录 + 右正文 */
 .shell { max-width: 1060px; margin: 0 auto; }
