@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · ShotTrans</title>
+<meta name="description" content="Installing, granting permissions, the two ways to translate, setting up engines, the wordbook and history.">
+<link rel="canonical" href="https://shottrans.com/en/guide.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://shottrans.com/zh/guide.html">
+<link rel="alternate" hreflang="en" href="https://shottrans.com/en/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://shottrans.com/en/guide.html">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">ShotTrans</a>
+  <nav class="nav"><a href="guide.html" class="on">Guide</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <div class="langs"><a class="lang" href="../zh/guide.html">中文</a><span class="lang off" title="Coming soon">日本語</span><span class="lang on">English</span></div>
+</header>
+
+<div class="shell with-toc">
+<nav class="toc"><p class="toc-title">On this page</p><ul><li class="l2"><a href="#Installing-and-permissions">Installing and permissions</a></li><li class="l3"><a href="#Screen-Recording-permission">Screen Recording permission</a></li><li class="l2"><a href="#Two-ways-to-translate">Two ways to translate</a></li><li class="l3"><a href="#Capture-amp-translate">Capture &amp; translate</a></li><li class="l3"><a href="#Type-to-translate">Type to translate</a></li><li class="l2"><a href="#Choosing-languages">Choosing languages</a></li><li class="l2"><a href="#Translation-engines">Translation engines</a></li><li class="l3"><a href="#Local-translation-no-setup">Local translation — no setup</a></li><li class="l3"><a href="#DeepL-and-Microsoft-classic-machine-translation">DeepL and Microsoft — classic machine translation</a></li><li class="l3"><a href="#Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</a></li><li class="l3"><a href="#Engines-aimed-at-the-Chinese-market">Engines aimed at the Chinese market</a></li><li class="l3"><a href="#Order-matters">Order matters</a></li><li class="l2"><a href="#Wordbook-and-history">Wordbook and history</a></li><li class="l2"><a href="#When-something-goes-wrong">When something goes wrong</a></li></ul></nav>
+<main class="page guide">
+<h1>Guide</h1>
+<p class="updated">For version 0.1.0</p>
+
+<h2 id="Installing-and-permissions">Installing and permissions</h2>
+<p>Drag <strong>ShotTrans</strong> into your Applications folder and open it.
+It lives in the menu bar — it has no Dock icon and no main window. Look for the
+closed-book icon at the top right of your screen.</p>
+
+<h3 id="Screen-Recording-permission">Screen Recording permission</h3>
+<p>The first time you draw a capture box, macOS asks for <strong>Screen
+Recording</strong> permission. This is not optional and not specific to this app:
+anything that reads pixels off your screen needs it, and without it captures come
+back blank.</p>
+<p>Grant it under <code>System Settings → Privacy &amp; Security → Screen
+Recording</code>, tick ShotTrans, then <strong>restart the app</strong> — macOS
+requires the restart before the permission takes effect.</p>
+<div class="note">
+  <p>If ShotTrans is already ticked and captures still fail, the app was
+  rebuilt and its signature changed, so the old grant no longer applies.
+  Remove it from the list with the <code>−</code> button and add it again.</p>
+</div>
+
+<h2 id="Two-ways-to-translate">Two ways to translate</h2>
+<div class="tablewrap">
+<table>
+  <tr><th>What it does</th><th>Default shortcut</th><th>When to use it</th></tr>
+  <tr><td>Capture &amp; translate</td><td><kbd>⌥A</kbd></td><td>Text you can't select: PDFs, games, video, images</td></tr>
+  <tr><td>Type to translate</td><td><kbd>⌥D</kbd></td><td>You know the words but not the translation</td></tr>
+</table>
+</div>
+<p>Both shortcuts are yours to change under <code>Settings → Shortcuts</code>.</p>
+
+<h3 id="Capture-amp-translate">Capture &amp; translate</h3>
+<p>Press the shortcut, drag a box around the text. Recognition happens on your
+Mac using Apple's Vision framework — the image itself is never uploaded, only the
+recognised text is sent to whichever engine you've enabled.</p>
+<p>You don't have to box the text precisely. If your selection cuts a sentence in
+half, the app looks slightly beyond the edges to complete it, then translates the
+whole sentence. Turn this off under <strong>Auto-complete</strong> in the menu if
+you want strictly what you selected and nothing more.</p>
+
+<h3 id="Type-to-translate">Type to translate</h3>
+<p>A plain input window. Useful in the other direction — you know what you want to
+say and need it in another language. Results appear in the same window.</p>
+
+<h2 id="Choosing-languages">Choosing languages</h2>
+<p>Both windows have a direction picker at the top. The defaults are
+<strong>Auto-detect → your system language</strong>.</p>
+<ul>
+  <li><strong>Auto-detect</strong> reads the text and works out the language.
+  It stays showing "Auto-detect" — it never quietly rewrites itself to whatever
+  it guessed. What it decided is shown next to the original text.</li>
+  <li>If the text turns out to be in your target language already, translating it
+  would be pointless, so the target switches — usually to English — and the picker
+  updates so you can see it happened.</li>
+</ul>
+<p>34 languages are available. The eleven most common sit at the top level of the
+picker; the rest are under <strong>More languages</strong>.</p>
+
+<h2 id="Translation-engines">Translation engines</h2>
+<p>Every enabled engine translates at once and the results are stacked, so you
+never wait on the slowest one.</p>
+
+<h3 id="Local-translation-no-setup">Local translation — no setup</h3>
+<p>macOS has a built-in translation framework. It's offline, free, unlimited, and
+already switched on. Quality is below the cloud services, which is why it sits
+last in the priority order, but it means the app is useful the second you install
+it.</p>
+<p>Language packs are downloaded by macOS, not by us. If a pair isn't installed
+yet, that row says so and offers an <strong>Install</strong> link straight to the
+right settings pane.</p>
+
+<h3 id="DeepL-and-Microsoft-classic-machine-translation">DeepL and Microsoft — classic machine translation</h3>
+<p>These two are the ones to add first if you want fast, cheap translation with a
+real free allowance, and neither needs anything more than an email address to sign
+up for.</p>
+<div class="tablewrap">
+<table>
+  <tr><th>Engine</th><th>Free allowance</th><th>Worth knowing</th></tr>
+  <tr>
+    <td><strong>Microsoft Translator</strong></td>
+    <td>2,000,000 characters a month</td>
+    <td>The largest free tier here, and the widest coverage — all 34 languages,
+    Cantonese and Literary Chinese included. Create a <em>Translator</em> resource
+    in the Azure portal on the F0 tier, then copy both the key <em>and</em> the
+    region. A missing region and a wrong region give the same 401, so check it
+    before you blame the key.</td>
+  </tr>
+  <tr>
+    <td><strong>DeepL</strong></td>
+    <td>500,000 characters a month</td>
+    <td>Widely held to be the best quality for European languages. It covers fewer
+    languages than the others — no Cantonese, Literary Chinese, Thai, Vietnamese,
+    Malay or Hindi — and the app tells you so rather than failing at request time.
+    Free keys end in <code>:fx</code>; the app notices and uses the right host by
+    itself.</td>
+  </tr>
+</table>
+</div>
+
+<h3 id="Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</h3>
+<p>Anything that speaks the OpenAI chat API works here: OpenAI itself,
+OpenRouter, most proxy services, and a local <strong>Ollama</strong> or
+<strong>LM Studio</strong>.</p>
+<div class="tablewrap">
+<table>
+  <tr><th>Field</th><th>What to enter</th></tr>
+  <tr><td>API Key</td><td>From your provider's console. For a local Ollama, any non-empty string.</td></tr>
+  <tr><td>Model</td><td>Click the <code>⌄</code> beside the field to fetch the models your key can actually call. Don't guess — model names get retired.</td></tr>
+  <tr><td>API base URL</td><td>Up to <code>/v1</code> and no further — leave off the trailing <code>/chat/completions</code>. Local Ollama is <code>http://localhost:11434/v1</code>.</td></tr>
+</table>
+</div>
+<p>Large language models translate noticeably better than classic machine
+translation on prose, and they cost per token rather than per character.</p>
+<p><strong>OpenAI</strong>, <strong>Claude</strong>, <strong>Google Gemini</strong>,
+<strong>xAI Grok</strong> and <strong>Mistral</strong> each have their own entry in
+the list, already pointed at the right endpoint — you only paste a key and pick a
+model. Gemini has a free allowance; the rest bill per token. Anything else that
+speaks the OpenAI format — OpenRouter, a proxy, a local Ollama — goes in the
+generic <em>Custom AI channel</em> entry.</p>
+
+<h3 id="Engines-aimed-at-the-Chinese-market">Engines aimed at the Chinese market</h3>
+<p>Baidu Translate, Tencent Translate, DeepSeek, Kimi, Zhipu GLM and Doubao are
+all supported and all have generous free tiers — but registering for them
+generally needs a mainland Chinese phone number and identity verification. If you
+have those accounts, the settings panel walks you through each one. If you don't,
+skip them: local translation plus DeepL or Microsoft covers everything.</p>
+
+<div class="note">
+  <p>Not sure what a field wants? Take a screenshot of the settings page and ask
+  any AI assistant what goes in each box. They know these providers' consoles and
+  will tell you where to copy each value from.</p>
+</div>
+
+<h3 id="Order-matters">Order matters</h3>
+<p>The order in the engine list decides two things: how the results are stacked,
+and which engine's translation gets saved to your history and wordbook — the
+topmost successful one. Drag to reorder.</p>
+
+<h2 id="Wordbook-and-history">Wordbook and history</h2>
+<p>Every translation is kept locally. Star one and it moves to the
+<strong>Wordbook</strong>, which shows the original and the translation with
+larger type, pronunciation, and — if you ask for it — an explanation generated by
+whichever language model you configured.</p>
+<p>That explanation costs money on your own API account, so the app asks before
+generating one, and caches the result forever. Asking again for the same word
+never bills you twice.</p>
+<p>Both the wordbook and the full history can be exported: JSON for moving to
+another machine, Markdown for reading elsewhere.</p>
+
+<h2 id="When-something-goes-wrong">When something goes wrong</h2>
+<div class="tablewrap">
+<table>
+  <tr><th>What you see</th><th>What it means</th></tr>
+  <tr><td>"No text recognised"</td><td>The selection missed the text, or caught only a fragment. Try a slightly wider box.</td></tr>
+  <tr><td>An engine says it doesn't support a language</td><td>Classic machine translation has a fixed language list set by the provider. Language models don't — configure one and that language works.</td></tr>
+  <tr><td>"Cooling down"</td><td>That engine failed three times in a row, so it's skipped for five minutes rather than making you wait on it every time.</td></tr>
+  <tr><td>"Quota used up"</td><td>The provider's free monthly allowance is gone. It resets next month; other engines carry on.</td></tr>
+  <tr><td>A shortcut does nothing</td><td>Another app claimed it first. macOS offers no way to query third-party shortcuts, so we can't always warn you — pick a different key.</td></tr>
+</table>
+</div>
+
+</main>
+</div>
+
+<footer class="foot">
+  <div class="foot-links"><a href="index.html">Home</a><span>Guide</span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  <p class="copy">© 2026 ShotTrans　·　Translate anything on your Mac screen · Your data never leaves your machine</p>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

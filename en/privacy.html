@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · ShotTrans</title>
+<meta name="description" content="We collect nothing, because we run no servers. This page says exactly where your data lives and when the app goes online.">
+<link rel="canonical" href="https://shottrans.com/en/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://shottrans.com/zh/privacy.html">
+<link rel="alternate" hreflang="en" href="https://shottrans.com/en/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://shottrans.com/en/privacy.html">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">ShotTrans</a>
+  <nav class="nav"><a href="guide.html">Guide</a><a href="privacy.html" class="on">Privacy</a><a href="terms.html">Terms</a></nav>
+  <div class="langs"><a class="lang" href="../zh/privacy.html">中文</a><span class="lang off" title="Coming soon">日本語</span><span class="lang on">English</span></div>
+</header>
+
+<div class="shell with-toc">
+<nav class="toc"><p class="toc-title">On this page</p><ul><li class="l2"><a href="#What-we-collect">What we collect</a></li><li class="l2"><a href="#Where-your-data-lives">Where your data lives</a></li><li class="l2"><a href="#When-the-app-goes-online-and-what-it-sends">When the app goes online — and what it sends</a></li><li class="l3"><a href="#Text-you-translate">Text you translate</a></li><li class="l3"><a href="#Screenshots">Screenshots</a></li><li class="l3"><a href="#Offline-translation">Offline translation</a></li><li class="l3"><a href="#Everything-else">Everything else</a></li><li class="l2"><a href="#Your-API-keys">Your API keys</a></li><li class="l2"><a href="#If-you-are-in-the-EEA-the-UK-or-a-similar-jurisdiction">If you are in the EEA, the UK, or a similar jurisdiction</a></li><li class="l2"><a href="#Children">Children</a></li><li class="l2"><a href="#Changes-to-this-policy">Changes to this policy</a></li><li class="l2"><a href="#Contact">Contact</a></li></ul></nav>
+<main class="page privacy">
+<h1>Privacy Policy</h1>
+<p class="lede">In one sentence: we collect nothing about you, because we run no
+servers to collect it on.</p>
+<p class="updated">Effective 4 September 2026 · Applies to the ShotTrans app for macOS</p>
+
+<div class="note">
+  <p>There is <strong>no account, no server operated by us, and no analytics,
+  telemetry or crash reporting</strong>. Your captures, the text recognised from
+  them, the translations, your wordbook and your history all stay on your own
+  Mac.</p>
+</div>
+
+<h2 id="What-we-collect">What we collect</h2>
+<p>Nothing. We have no way to receive data from the app, because the app never
+sends any to us. There is no sign-up, no device registration, no usage
+statistics, and no third-party SDK embedded for measurement or advertising.</p>
+
+<h2 id="Where-your-data-lives">Where your data lives</h2>
+<p>In a single folder on your Mac. The Mac App Store version, being sandboxed,
+keeps it inside the app's own container; other builds keep it under
+<code>~/Library/Application&nbsp;Support/</code>.</p>
+<div class="tablewrap">
+<table>
+  <tr><th>File</th><th>What's in it</th></tr>
+  <tr><td><code>history.json</code></td><td>Translation history — original text, translations, language pair, time, which engine produced it</td></tr>
+  <tr><td><code>guides.json</code></td><td>Word explanations you asked to be generated</td></tr>
+  <tr><td><code>providers.json</code></td><td>The API keys and settings you entered for translation engines</td></tr>
+  <tr><td><code>settings.json</code></td><td>Language direction and other preferences</td></tr>
+  <tr><td><code>hotkeys.json</code></td><td>Your keyboard shortcuts</td></tr>
+  <tr><td><code>models.json</code></td><td>Model names fetched from providers you configured</td></tr>
+  <tr><td><code>quota.json</code></td><td>How much of each provider's free monthly allowance you've used</td></tr>
+</table>
+</div>
+<p>Delete the folder and everything is gone. Nothing is kept anywhere else.</p>
+
+<h2 id="When-the-app-goes-online-and-what-it-sends">When the app goes online — and what it sends</h2>
+<p>This is the part worth reading carefully.</p>
+
+<h3 id="Text-you-translate">Text you translate</h3>
+<p>When you use a cloud engine, <strong>the text goes from your Mac directly to
+that provider, using the API key you entered</strong>. It does not pass through
+us. We are not a party to that request and never see its contents.</p>
+<p>That also means the provider's own privacy policy governs what happens to that
+text. You chose the provider and hold the account; the relationship is between
+you and them. If you would rather no text left your machine at all, use only the
+built-in offline engine described below.</p>
+
+<p>The engines you can enable, and their privacy policies, are:</p>
+<ul>
+  <li>DeepL — <a href="https://www.deepl.com/privacy" rel="noopener">deepl.com/privacy</a></li>
+  <li>Microsoft (Azure AI Translator) — <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">privacy.microsoft.com</a></li>
+  <li>OpenAI — <a href="https://openai.com/policies/privacy-policy" rel="noopener">openai.com/policies</a></li>
+  <li>Anthropic (Claude) — <a href="https://www.anthropic.com/legal/privacy" rel="noopener">anthropic.com/legal/privacy</a></li>
+  <li>Google (Gemini) — <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></li>
+  <li>xAI (Grok) — <a href="https://x.ai/legal/privacy-policy" rel="noopener">x.ai/legal</a></li>
+  <li>Mistral AI — <a href="https://mistral.ai/terms" rel="noopener">mistral.ai/terms</a></li>
+  <li>Baidu, Tencent, DeepSeek, Kimi, Zhipu GLM, Doubao — their own sites</li>
+  <li>Anything added through the generic <em>Custom AI channel</em> entry — whichever
+  service you pointed it at, including a model running locally on your own machine,
+  which sends nothing anywhere</li>
+</ul>
+<p>None of these is enabled until you enter a key for it.</p>
+
+<h3 id="Screenshots">Screenshots</h3>
+<p>Captured images are processed <strong>on your Mac</strong> by Apple's Vision
+framework to recognise text. The image itself is never uploaded — only the
+recognised text is sent, and only to engines you enabled.</p>
+
+<h3 id="Offline-translation">Offline translation</h3>
+<p>macOS ships its own translation engine. It runs entirely on your device and
+sends nothing anywhere. It is enabled by default, so the app is fully usable
+without configuring any cloud service.</p>
+
+<h3 id="Everything-else">Everything else</h3>
+<p>The app also contacts a provider when you press <strong>Verify</strong> on an
+engine's settings, or fetch its model list. Both are actions you take
+deliberately. Apart from these, and translation itself, the app makes no network
+requests — no update checks that report on you, no pings, no beacons.</p>
+
+<h2 id="Your-API-keys">Your API keys</h2>
+<p>Keys are stored in plain text in <code>providers.json</code> on your own disk,
+readable only by your macOS user account. They are used solely to sign requests to
+the provider you entered them for, and are never transmitted anywhere else.</p>
+<p>If you export your settings with the "include API keys" option, the resulting
+file contains those keys in plain text. Treat that file like a password.</p>
+
+<h2 id="If-you-are-in-the-EEA-the-UK-or-a-similar-jurisdiction">If you are in the EEA, the UK, or a similar jurisdiction</h2>
+<p>The GDPR and comparable laws govern the processing of personal data. Because
+we neither collect nor receive any data from you, we do not act as a controller
+or processor of your personal data.</p>
+<p>Where you send text to a third-party translation provider, you are doing so
+under your own account with that provider, and their terms and privacy policy
+apply to it. The rights you may wish to exercise over that data — access,
+deletion, portability — are exercised with them, not with us.</p>
+<p>Data held by the app on your own device is under your control at all times.
+You can view it, export it, or delete it without asking anyone.</p>
+
+<h2 id="Children">Children</h2>
+<p>This app is a general-purpose utility and is not directed at children. We do
+not knowingly collect information from anyone, of any age.</p>
+
+<h2 id="Changes-to-this-policy">Changes to this policy</h2>
+<p>If this policy changes, the effective date at the top changes with it, and the
+current version always lives at this address. Since we hold no contact details
+for you, we cannot notify you individually — please check here if it matters to
+you.</p>
+
+<h2 id="Contact">Contact</h2>
+<p>Questions about this policy: <a href="mailto:theblackpanther@qq.com">theblackpanther@qq.com</a></p>
+
+</main>
+</div>
+
+<footer class="foot">
+  <div class="foot-links"><a href="index.html">Home</a><a href="guide.html">Guide</a><span>Privacy</span><a href="terms.html">Terms</a></div>
+  <p class="copy">© 2026 ShotTrans　·　Translate anything on your Mac screen · Your data never leaves your machine</p>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
