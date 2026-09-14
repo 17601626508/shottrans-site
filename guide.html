@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guide · ShotTrans</title>
-<meta name="description" content="Installing, granting permissions, the two ways to translate, setting up engines, the wordbook and history.">
+<title>How to Translate Screenshots on Mac · ShotTrans Guide</title>
+<meta name="description" content="Learn how to translate screenshots and screen text on Mac with ShotTrans: grant OCR permissions, capture a region, choose engines and save words locally.">
 <link rel="canonical" href="https://shottrans.com/guide.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://shottrans.com/zh/guide.html">
 <link rel="alternate" hreflang="en" href="https://shottrans.com/guide.html">
@@ -23,7 +23,7 @@
 </header>
 
 <div class="shell with-toc">
-<nav class="toc"><p class="toc-title">On this page</p><ul><li class="l2"><a href="#Installing-and-permissions">Installing and permissions</a></li><li class="l3"><a href="#Screen-Recording-permission">Screen Recording permission</a></li><li class="l2"><a href="#Two-ways-to-translate">Two ways to translate</a></li><li class="l3"><a href="#Capture-amp-translate">Capture &amp; translate</a></li><li class="l3"><a href="#Type-to-translate">Type to translate</a></li><li class="l2"><a href="#Choosing-languages">Choosing languages</a></li><li class="l2"><a href="#Translation-engines">Translation engines</a></li><li class="l3"><a href="#Local-translation-no-setup">Local translation — no setup</a></li><li class="l3"><a href="#DeepL-and-Microsoft-classic-machine-translation">DeepL and Microsoft — classic machine translation</a></li><li class="l3"><a href="#Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</a></li><li class="l3"><a href="#Engines-aimed-at-the-Chinese-market">Engines aimed at the Chinese market</a></li><li class="l3"><a href="#Order-matters">Order matters</a></li><li class="l2"><a href="#Wordbook-and-history">Wordbook and history</a></li><li class="l2"><a href="#When-something-goes-wrong">When something goes wrong</a></li></ul></nav>
+<nav class="toc"><p class="toc-title">On this page</p><ul><li class="l2"><a href="#Installing-and-permissions">Installing and permissions</a></li><li class="l3"><a href="#Screen-Recording-permission">Screen Recording permission</a></li><li class="l2"><a href="#Two-ways-to-translate">Two ways to translate</a></li><li class="l3"><a href="#Capture-amp-translate">Capture &amp; translate</a></li><li class="l3"><a href="#Type-to-translate">Type to translate</a></li><li class="l2"><a href="#How-to-translate-a-screenshot">How to translate a screenshot</a></li><li class="l2"><a href="#Choosing-languages">Choosing languages</a></li><li class="l2"><a href="#Translation-engines">Translation engines</a></li><li class="l3"><a href="#Local-translation-no-setup">Local translation — no setup</a></li><li class="l3"><a href="#DeepL-and-Microsoft-classic-machine-translation">DeepL and Microsoft — classic machine translation</a></li><li class="l3"><a href="#Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</a></li><li class="l3"><a href="#Engines-aimed-at-the-Chinese-market">Engines aimed at the Chinese market</a></li><li class="l3"><a href="#Order-matters">Order matters</a></li><li class="l2"><a href="#Wordbook-and-history">Wordbook and history</a></li><li class="l2"><a href="#When-something-goes-wrong">When something goes wrong</a></li></ul></nav>
 <main class="page guide">
 <h1>Guide</h1>
 <p class="updated">For version 0.1.0</p>
@@ -69,6 +69,12 @@ you want strictly what you selected and nothing more.</p>
 <h3 id="Type-to-translate">Type to translate</h3>
 <p>A plain input window. Useful in the other direction — you know what you want to
 say and need it in another language. Results appear in the same window.</p>
+
+<h2 id="How-to-translate-a-screenshot">How to translate a screenshot</h2>
+<p>Press <kbd>⌥A</kbd>, select the part of the screenshot you want to read, and
+ShotTrans extracts the text with macOS OCR before translating it. This workflow is
+useful for screenshots, scanned documents, game dialogue, subtitles and image text
+that a normal translator cannot copy.</p>
 
 <h2 id="Choosing-languages">Choosing languages</h2>
 <p>Both windows have a direction picker at the top. The defaults are
