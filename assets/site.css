@@ -121,6 +121,8 @@ th { color: var(--muted); font-weight: 500; }
 .foot-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; font-size: 14px; }
 .foot-links span { color: var(--faint); }
 .copy { color: var(--faint); font-size: 13px; margin: 12px 0 0; }
+.registration { font-size: 14px; margin: 10px 0 0; }
+.registration a { color: var(--muted); }
 
 /* 窄屏：目录收到正文上面，不再占一栏 */
 @media (max-width: 860px) {
