@@ -15,7 +15,10 @@
   function update() {
     // 取「已经滚过顶栏」的最后一个标题。用位置算而不是 IntersectionObserver：
     // 章节高度差别很大，观察器在长章节里会整段没有交点，高亮就断了。
-    var line = 100, found = targets[0];
+    // 与 CSS 的锚点留白保持一致；手机上导航分两行，阈值也要跟着变。
+    var line = (parseFloat(getComputedStyle(document.documentElement)
+      .getPropertyValue('--anchor-offset')) || 100) + 2;
+    var found = targets[0];
     for (var i = 0; i < targets.length; i++) {
       if (targets[i].el.getBoundingClientRect().top <= line) found = targets[i];
     }
