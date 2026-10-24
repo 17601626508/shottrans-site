@@ -31,7 +31,7 @@
 <h1>Privacy Policy</h1>
 <p class="lede">In one sentence: we collect nothing about you, because we run no
 servers to collect it on.</p>
-<p class="updated">Effective 4 September 2026 · Applies to the ShotTrans app for macOS</p>
+<p class="updated">Effective 4 September 2026 · Applies to the OCR截图翻译 (ShotTrans) app for macOS</p>
 
 <div class="note">
   <p>There is <strong>no account, no server operated by us, and no analytics,
@@ -89,7 +89,10 @@ built-in offline engine described below.</p>
   service you pointed it at, including a model running locally on your own machine,
   which sends nothing anywhere</li>
 </ul>
-<p>None of these is enabled until you enter a key for it.</p>
+<p>None of these is enabled until you enter a key for it. OpenAI, Anthropic, Google,
+xAI, Mistral and the Custom AI channel are not offered in the mainland China App Store
+version; the app decides this from your App Store storefront, which it reads through
+Apple's StoreKit — that lookup is handled by Apple and never reaches us.</p>
 
 <h3 id="Screenshots">Screenshots</h3>
 <p>Captured images are processed <strong>on your Mac</strong> by Apple's Vision
@@ -103,16 +106,18 @@ without configuring any cloud service.</p>
 
 <h3 id="Everything-else">Everything else</h3>
 <p>The app also contacts a provider when you press <strong>Verify</strong> on an
-engine's settings, or fetch its model list. Both are actions you take
-deliberately. Apart from these, and translation itself, the app makes no network
-requests — no update checks that report on you, no pings, no beacons.</p>
+engine's settings or fetch its model list, and when you open the engines window it
+sends one short test phrase to each enabled engine to measure speed. Apart from
+these, translation itself and Apple's own StoreKit (purchases and storefront), the
+app makes no network requests — no update checks that report on you, no pings, no
+beacons.</p>
 
 <h2 id="Your-API-keys">Your API keys</h2>
 <p>Keys are stored in plain text in <code>providers.json</code> on your own disk,
 readable only by your macOS user account. They are used solely to sign requests to
 the provider you entered them for, and are never transmitted anywhere else.</p>
-<p>If you export your settings with the "include API keys" option, the resulting
-file contains those keys in plain text. Treat that file like a password.</p>
+<p>If you export your settings, the resulting file <strong>always</strong> contains
+those keys in plain text. Treat that file like a password.</p>
 
 <h2 id="If-you-are-in-the-EEA-the-UK-or-a-similar-jurisdiction">If you are in the EEA, the UK, or a similar jurisdiction</h2>
 <p>The GDPR and comparable laws govern the processing of personal data. Because

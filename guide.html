@@ -26,26 +26,28 @@
 </header>
 
 <div class="shell with-toc">
-<nav class="toc"><p class="toc-title">On this page</p><ul><li class="l2"><a href="#Installing-and-permissions">Installing and permissions</a></li><li class="l3"><a href="#Screen-Recording-permission">Screen Recording permission</a></li><li class="l2"><a href="#Two-ways-to-translate">Two ways to translate</a></li><li class="l3"><a href="#Capture-amp-translate">Capture &amp; translate</a></li><li class="l3"><a href="#Type-to-translate">Type to translate</a></li><li class="l2"><a href="#How-to-translate-a-screenshot">How to translate a screenshot</a></li><li class="l2"><a href="#Choosing-languages">Choosing languages</a></li><li class="l2"><a href="#Translation-engines">Translation engines</a></li><li class="l3"><a href="#Local-translation-no-setup">Local translation — no setup</a></li><li class="l3"><a href="#DeepL-and-Microsoft-classic-machine-translation">DeepL and Microsoft — classic machine translation</a></li><li class="l3"><a href="#Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</a></li><li class="l3"><a href="#Engines-aimed-at-the-Chinese-market">Engines aimed at the Chinese market</a></li><li class="l3"><a href="#Order-matters">Order matters</a></li><li class="l2"><a href="#Wordbook-and-history">Wordbook and history</a></li><li class="l2"><a href="#When-something-goes-wrong">When something goes wrong</a></li></ul></nav>
+<nav class="toc"><p class="toc-title">On this page</p><ul><li class="l2"><a href="#Installing-and-permissions">Installing and permissions</a></li><li class="l3"><a href="#Screen-Recording-permission">Screen Recording permission</a></li><li class="l2"><a href="#Two-ways-to-translate">Two ways to translate</a></li><li class="l3"><a href="#Capture-amp-translate">Capture &amp; translate</a></li><li class="l3"><a href="#Type-to-translate">Type to translate</a></li><li class="l2"><a href="#How-to-translate-a-screenshot">How to translate a screenshot</a></li><li class="l2"><a href="#Choosing-languages">Choosing languages</a></li><li class="l2"><a href="#Translation-engines">Translation engines</a></li><li class="l3"><a href="#Local-translation-no-setup">Local translation — no setup</a></li><li class="l3"><a href="#DeepL-and-Microsoft-classic-machine-translation">DeepL and Microsoft — classic machine translation</a></li><li class="l3"><a href="#Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</a></li><li class="l3"><a href="#Engines-aimed-at-the-Chinese-market">Engines aimed at the Chinese market</a></li><li class="l3"><a href="#Order-matters">Order matters</a></li><li class="l2"><a href="#Wordbook-and-history">Wordbook and history</a></li><li class="l2"><a href="#Backup-and-moving-to-a-new-Mac">Backup and moving to a new Mac</a></li><li class="l2"><a href="#Free-and-lifetime">Free and lifetime</a></li><li class="l2"><a href="#When-something-goes-wrong">When something goes wrong</a></li></ul></nav>
 <main id="main" class="page guide" tabindex="-1">
 <h1>Guide</h1>
-<p class="updated">For version 0.1.0</p>
+<p class="updated">For version 1.0.1</p>
 
 <h2 id="Installing-and-permissions">Installing and permissions</h2>
-<p>Drag <strong>ShotTrans</strong> into your Applications folder and open it.
-It lives in the menu bar — it has no Dock icon and no main window. Look for the
+<p>Install <strong>OCR截图翻译</strong> (ShotTrans) from the Mac App Store; it needs macOS 15.0 or later.
+It lives in the menu bar — no main window, and no Dock icon except while one of its
+windows (settings, engines, type-to-translate) is open. Look for the
 closed-book icon at the top right of your screen.</p>
 
 <h3 id="Screen-Recording-permission">Screen Recording permission</h3>
-<p>The first time you draw a capture box, macOS asks for <strong>Screen
+<p>On first launch, macOS asks for <strong>Screen
 Recording</strong> permission. This is not optional and not specific to this app:
 anything that reads pixels off your screen needs it, and without it captures come
 back blank.</p>
 <p>Grant it under <code>System Settings → Privacy &amp; Security → Screen
-Recording</code>, tick ShotTrans, then <strong>restart the app</strong> — macOS
-requires the restart before the permission takes effect.</p>
+Recording</code>, tick OCR截图翻译, then <strong>restart the app</strong> — macOS
+requires the restart before the permission takes effect. The menu item
+<em>Restart after granting</em> does it for you.</p>
 <div class="note">
-  <p>If ShotTrans is already ticked and captures still fail, the app was
+  <p>If the app is already ticked and captures still fail, the app was
   rebuilt and its signature changed, so the old grant no longer applies.
   Remove it from the list with the <code>−</code> button and add it again.</p>
 </div>
@@ -64,10 +66,9 @@ requires the restart before the permission takes effect.</p>
 <p>Press the shortcut, drag a box around the text. Recognition happens on your
 Mac using Apple's Vision framework — the image itself is never uploaded, only the
 recognised text is sent to whichever engine you've enabled.</p>
-<p>You don't have to box the text precisely. If your selection cuts a sentence in
-half, the app looks slightly beyond the edges to complete it, then translates the
-whole sentence. Turn this off under <strong>Auto-complete</strong> in the menu if
-you want strictly what you selected and nothing more.</p>
+<p>By default the app translates exactly what you selected. If your boxes often cut
+sentences in half, turn on <strong>Auto-complete</strong> in the menu: the app then
+looks slightly beyond the edges to complete the sentence before translating it.</p>
 
 <h3 id="Type-to-translate">Type to translate</h3>
 <p>A plain input window. Useful in the other direction — you know what you want to
@@ -75,7 +76,7 @@ say and need it in another language. Results appear in the same window.</p>
 
 <h2 id="How-to-translate-a-screenshot">How to translate a screenshot</h2>
 <p>Press <kbd>⌥A</kbd>, select the part of the screenshot you want to read, and
-ShotTrans extracts the text with macOS OCR before translating it. This workflow is
+the app extracts the text with macOS OCR before translating it. This workflow is
 useful for screenshots, scanned documents, game dialogue, subtitles and image text
 that a normal translator cannot copy.</p>
 
@@ -98,7 +99,7 @@ picker; the rest are under <strong>More languages</strong>.</p>
 never wait on the slowest one.</p>
 
 <h3 id="Local-translation-no-setup">Local translation — no setup</h3>
-<p>macOS has a built-in translation framework. It's offline, free, unlimited, and
+<p>macOS has a built-in translation framework. It's offline, needs no account, and is
 already switched on. Quality is below the cloud services, which is why it sits
 last in the priority order, but it means the app is useful the second you install
 it.</p>
@@ -135,6 +136,10 @@ up for.</p>
 </div>
 
 <h3 id="Custom-AI-channel-anything-speaking-the-OpenAI-format">Custom AI channel — anything speaking the OpenAI format</h3>
+<div class="note">
+  <p>The mainland China App Store version does not offer this channel, nor the
+  OpenAI, Claude, Gemini, Grok and Mistral entries below.</p>
+</div>
 <p>Anything that speaks the OpenAI chat API works here: OpenAI itself,
 OpenRouter, most proxy services, and a local <strong>Ollama</strong> or
 <strong>LM Studio</strong>.</p>
@@ -174,15 +179,31 @@ and which engine's translation gets saved to your history and wordbook — the
 topmost successful one. Drag to reorder.</p>
 
 <h2 id="Wordbook-and-history">Wordbook and history</h2>
-<p>Every translation is kept locally. Star one and it moves to the
+<p>Every successful translation is kept locally (the latest 500; starred entries are
+never dropped), and you can search or delete them. Star one and it goes to the
 <strong>Wordbook</strong>, which shows the original and the translation with
 larger type, pronunciation, and — if you ask for it — an explanation generated by
 whichever language model you configured.</p>
 <p>That explanation costs money on your own API account, so the app asks before
 generating one, and caches the result forever. Asking again for the same word
 never bills you twice.</p>
-<p>Both the wordbook and the full history can be exported: JSON for moving to
-another machine, Markdown for reading elsewhere.</p>
+<p>The wordbook exports and imports as JSON for moving to another machine; the
+history exports as Markdown for reading elsewhere.</p>
+
+<h2 id="Backup-and-moving-to-a-new-Mac">Backup and moving to a new Mac</h2>
+<p><code>Settings → Backup &amp; migration</code> exports your language direction,
+shortcuts and engine setup. The file <strong>always includes your API keys in plain
+text</strong> — treat it like a password. Importing replaces your current setup
+(you're asked first).</p>
+
+<h2 id="Free-and-lifetime">Free and lifetime</h2>
+<p>The app is free to download with <strong>10 translations a day</strong> — captures
+and typed text both count, only successful translations are counted, and the count
+resets at midnight. Every engine works on the free tier, and local translation and
+your own keys count too.</p>
+<p>A one-time <strong>Lifetime unlock</strong> in the menu (<em>About license</em>)
+removes the limit. It isn't a subscription; the price is whatever the App Store
+shows. Use <em>Restore purchases</em> after reinstalling.</p>
 
 <h2 id="When-something-goes-wrong">When something goes wrong</h2>
 <div class="tablewrap">
