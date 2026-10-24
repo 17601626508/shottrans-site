@@ -142,6 +142,15 @@ th { color: var(--muted); font-weight: 500; }
 .download-section h2 { font-size: 28px; margin: 0 0 10px; }
 .download-section p { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
 .download-section .download-note { font-size: 12px; margin: 16px auto 0; max-width: 620px; }
+.download-note a { color: var(--accent); word-break: break-all; }
+/* Apple 官方徽章：只缩放，不加底色、不改形状 */
+.store-badge { display: inline-block; line-height: 0; border-radius: 9px; }
+.store-badge img { display: block; height: auto; }
+.store-badge:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.download-options { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px 36px; }
+.store-qr { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.store-qr img { display: block; background: #fff; padding: 8px; border: 1px solid var(--rule); border-radius: 12px; }
+.store-qr figcaption { color: var(--muted); font-size: 12px; }
 
 /* Shared footer retains the ICP registration on every page. */
 .foot { border-top: 1px solid var(--rule); padding: 26px var(--gutter) 34px; text-align: center; margin-top: 48px; }
@@ -200,6 +209,8 @@ th { color: var(--muted); font-weight: 500; }
   .download-section { padding: 28px 20px; border-radius: var(--radius-md); }
   .download-section h2 { font-size: 24px; }
   .download-section .button { font-size: 14px; padding: 12px 18px; }
+  /* 手机上扫不了自己屏幕上的码，只留徽章 */
+  .store-qr { display: none; }
   .foot { margin-top: 28px; }
 }
 @media (prefers-reduced-motion: reduce) {
